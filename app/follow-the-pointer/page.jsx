@@ -1,6 +1,5 @@
 "use client";
 import * as React from "react";
-import "./style.css";
 
 export default function FollowThePointer() {
   const ref = React.useRef(null);
@@ -16,9 +15,12 @@ export default function FollowThePointer() {
 
   return (
     <>
-      <div className="wrapper" onClick={handleClick}>
+      <div
+        className="relative w-screen max-w-full h-screen"
+        onClick={handleClick}
+      >
         <div
-          className="box"
+          className="w-12 h-12 absolute bg-beige transition duration-100 ease-in-out"
           ref={ref}
           style={{
             transform: `translate(${position[0]}px, ${position[1]}px)`,

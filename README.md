@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Description
 
-Personal project for react practice.
+Personal project for React practice.
 
 ## Getting Started
 
