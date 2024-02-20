@@ -5,12 +5,12 @@ export default function FollowThePointer() {
   const ref = React.useRef(null);
   const [position, setPosition] = React.useState([0, 0]);
 
-  const handleClick = ({ clientX, clientY }) => {
-    console.log(clientX);
-    console.log(clientY);
-
+  const handleClick = ({ nativeEvent }) => {
     const { width, height } = ref.current.getBoundingClientRect();
-    setPosition([clientX - width / 2, clientY - height / 2]);
+    setPosition([
+      nativeEvent.offsetX - width / 2,
+      nativeEvent.offsetY - height / 2,
+    ]);
   };
 
   return (
