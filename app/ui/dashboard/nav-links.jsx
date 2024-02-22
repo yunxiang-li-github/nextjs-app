@@ -34,13 +34,22 @@ export default function NavLinks() {
             key={link.name}
             href={link.href}
             className={clsx(
-              "flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3",
+              "group flex items-center px-2 py-2 text-sm font-medium rounded-md",
               {
-                "bg-sky-100 text-blue-600": pathname === link.href,
+                "bg-gray-900 text-white": pathname === link.href,
+                "text-gray-300 hover:bg-gray-700 hover:text-white":
+                  pathname !== link.href,
               }
             )}
           >
-            <LinkIcon className="w-6" />
+            <LinkIcon
+              className={clsx("mr-3 flex-shrink-0 h-6 w-6", {
+                "text-gray-300": pathname === link.href,
+                "text-gray-400 group-hover:text-gray-300":
+                  pathname !== link.href,
+              })}
+              aria-hidden="true"
+            />
             <p className="hidden md:block">{link.name}</p>
           </Link>
         );

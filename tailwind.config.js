@@ -12,6 +12,8 @@ module.exports = {
         charcoal: "#231f20",
         beige_body: "#fffbe3",
         beige: "#f9f4da",
+        accent: "#fcba28",
+        bg_alt: "#231f20",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

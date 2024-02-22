@@ -3,7 +3,7 @@ import * as React from "react";
 
 export default function FollowThePointer() {
   const ref = React.useRef(null);
-  const [position, setPosition] = React.useState([0, 0]);
+  const [position, setPosition] = React.useState([10, 10]);
 
   const handleClick = ({ nativeEvent }) => {
     const { width, height } = ref.current.getBoundingClientRect();
@@ -16,7 +16,7 @@ export default function FollowThePointer() {
   return (
     <>
       <div
-        className="relative w-screen max-w-full h-screen"
+        className="relative w-screen max-w-full h-full bg-coal"
         onClick={handleClick}
       >
         <div

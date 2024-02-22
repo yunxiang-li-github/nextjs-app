@@ -1,21 +1,23 @@
-import Link from "next/link";
 import NavLinks from "@/app/ui/dashboard/nav-links";
 
 export default function SideNav() {
   return (
-    <div className="flex h-full flex-col px-3 py-4 md:px-2">
-      <Link
-        className="mb-2 flex h-20 items-end justify-start rounded-md bg-blue-600 p-4 md:h-40"
-        href="/"
-      >
-        <div className="w-32 text-white md:w-40">
-          <h1>React Practice</h1>
+    <>
+      {/* Sidebar component, swap this element with another sidebar if you like */}
+      <div className="flex min-h-0 flex-1 flex-col bg-coal">
+        <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
+          <div className="flex flex-shrink-0 items-center px-4">
+            <img
+              className="h-8 w-auto rounded"
+              src="https://avatars.githubusercontent.com/u/122238474"
+              alt="Yunxiang Li"
+            />
+          </div>
+          <nav className="mt-5 flex-1 space-y-1 px-2">
+            <NavLinks />
+          </nav>
         </div>
-      </Link>
-      <div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
-        <NavLinks />
-        <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:block"></div>
       </div>
-    </div>
+    </>
   );
 }
