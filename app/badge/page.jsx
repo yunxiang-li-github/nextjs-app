@@ -1,19 +1,42 @@
-export default function Badge() {
-  const name = "Yunxiang Li";
-  const handle = "yunxiang-li-github";
-  const img = "https://avatars.githubusercontent.com/u/122238474";
+"use client";
+import React from "react";
+import Badge from "@/app/ui/badge";
+import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 
+const USER_DATA = {
+  name: "Yunxiang Li",
+  img: "https://avatars.githubusercontent.com/u/122238474",
+  handle: "yunxiang-li-github",
+  href: "https://github.com/yunxiang-li-github",
+};
+
+export default function Page() {
+  const [mode, setMode] = React.useState("dark");
+  const handleDarkMode = () => {
+    setMode("dark");
+  };
+  const handleLightMode = () => {
+    setMode("light");
+  };
+
+  const Icon = mode === "dark" ? SunIcon : MoonIcon;
+  const handleMode = mode === "dark" ? handleLightMode : handleDarkMode;
+  const text = mode === "dark" ? "Love Coding ⌨️ " : "& Playing Basketball 🏀";
   return (
-    <div className="bg-coal h-full flex flex-col justify-center">
-      <div className="w-80 my-0 mx-auto border border-solid border-beige/10 rounded-lg p-6 flex flex-col gap-4 bg-charcoal text-center items-center">
-        <img alt={name} src={img} className="w-52 rounded-full" />
-        <div>
-          <h4 className="my-5 size-4 w-full text-beige text-sm uppercase">
-            {name}
-          </h4>
-          <p className="my-5 size-4 w-full text-beige/75 text-sm">@{handle}</p>
+    <>
+      <div
+        className={`h-full rounded-md p-10 ${mode === "dark" ? "bg-coal" : ""}`}
+      >
+        <div className="w-full flex flex-row justify-end">
+          <Icon
+            className={`w-6 hover:cursor-pointer ${mode === "dark" ? "text-white" : ""}`}
+            onClick={handleMode}
+          />
         </div>
+        <Badge user={USER_DATA} mode={mode}>
+          <p>{text}</p>
+        </Badge>
       </div>
-    </div>
+    </>
   );
 }

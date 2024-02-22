@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
-import '@/app/globals.css'
-import SideNav from '@/app/ui/dashboard/sidenav';
+import "@/app/globals.css";
+import SideNav from "@/app/ui/dashboard/sidenav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
           <div className="w-full flex-none md:w-64">
             <SideNav />
           </div>
-          <div className="flex-grow p-6 md:overflow-y-auto md:p-12">
+          <div className="flex-grow p-6 md:overflow-y-auto md:p-4">
             {children}
           </div>
         </div>
