@@ -24,18 +24,24 @@ export default function Page() {
   const text = mode === "dark" ? "Love Coding ⌨️ " : "& Playing Basketball 🏀";
   return (
     <>
-      <div
-        className={`h-full rounded-md p-10 ${mode === "dark" ? "bg-coal" : ""}`}
-      >
-        <div className="w-full flex flex-row justify-end">
-          <Icon
-            className={`w-6 hover:cursor-pointer ${mode === "dark" ? "text-white" : ""}`}
-            onClick={handleMode}
-          />
+      <div className="p-6 h-full">
+        <div
+          className={`h-full rounded-md p-10 ${
+            mode === "dark" ? "bg-coal" : ""
+          }`}
+        >
+          <div className="w-full flex flex-row justify-end">
+            <Icon
+              className={`w-6 hover:cursor-pointer ${
+                mode === "dark" ? "text-white" : ""
+              }`}
+              onClick={handleMode}
+            />
+          </div>
+          <Badge user={USER_DATA} mode={mode}>
+            <p>{text}</p>
+          </Badge>
         </div>
-        <Badge user={USER_DATA} mode={mode}>
-          <p>{text}</p>
-        </Badge>
       </div>
     </>
   );

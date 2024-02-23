@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} h-full`}>
         <div className="h-full">
           <div className="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
-            <SideNav />
+            <SideNav/>
           </div>
           <div className="flex flex-1 flex-col md:pl-64 h-full">
             {/* todo: responsive design */}
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
               </button>
             </div> */}
             <main className="flex-1">
-              <div className="h-full p-6">{children}</div>
+              <div className="h-full text-beige">{children}</div>
             </main>
           </div>
         </div>

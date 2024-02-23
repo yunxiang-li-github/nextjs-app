@@ -1,6 +1,6 @@
 import NavLinks from "@/app/ui/dashboard/nav-links";
 
-export default function SideNav() {
+export default function SideNav({links}) {
   return (
     <>
       {/* Sidebar component, swap this element with another sidebar if you like */}

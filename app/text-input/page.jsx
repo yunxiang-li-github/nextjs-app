@@ -1,12 +1,21 @@
 import LimitedTextInput from "@/app/ui/limited-text-input";
-import PasswordInput from "../ui/password-text-input";
+import PasswordInput from "@/app/ui/password-text-input";
+import Container from "@/app/ui/dashboard/container";
 
-export default function Page() {
+function TextInput() {
   return (
-    <div className="h-full rounded-md p-10 bg-coal">
+    <>
       <LimitedTextInput characterLimit={20} />
       <div className="m-10"></div>
       <PasswordInput minimum={8} />
-    </div>
+    </>
+  );
+}
+
+export default function Page() {
+  return (
+    <Container>
+      <TextInput />
+    </Container>
   );
 }

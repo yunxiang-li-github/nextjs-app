@@ -1,27 +1,8 @@
 "use client";
-
-import {
-  UserCircleIcon,
-  HomeIcon,
-  CursorArrowRaysIcon,
-} from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-
-const links = [
-  { name: "Home", href: "/", icon: HomeIcon },
-  {
-    name: "Badge",
-    href: "/badge",
-    icon: UserCircleIcon,
-  },
-  {
-    name: "Follow the pointer",
-    href: "/follow-the-pointer",
-    icon: CursorArrowRaysIcon,
-  },
-];
+import links from "@/app/scripts/links";
 
 export default function NavLinks() {
   const pathname = usePathname();
