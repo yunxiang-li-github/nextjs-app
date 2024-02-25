@@ -66,3 +66,16 @@ div.primary {
   padding: 2.5rem;
   background-color: #0f0d0e;
 }
+
+select.primary {
+  background: #231f20;
+  color: #fcba28;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  border: 10px solid #231f20;
+}
+
+select.primary:focus {
+  outline: none;
+}
