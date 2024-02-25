@@ -18,7 +18,7 @@ export default function PasswordInput({ minimum = 8 }) {
     e.preventDefault();
 
     if (thresholdMet) {
-      alert("Password submitted");
+      alert(`Password length: ${inputValue.length}`);
     } else {
       alert("You need a longer password");
     }

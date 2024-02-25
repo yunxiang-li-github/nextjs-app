@@ -16,7 +16,7 @@ export default function LimitedTextInput({ characterLimit = 20 }) {
     if (limitExceeded) {
       alert("The input exceeds the character limit. Please shorten your text.");
     } else {
-      alert("Submitted.");
+      alert(`Characters remaining: ${remainingCharacters}`);
     }
   };
 

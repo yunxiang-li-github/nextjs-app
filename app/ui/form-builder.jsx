@@ -39,8 +39,9 @@ export default function FormBuilder() {
   };
 
   return (
-    <div>
-      <h1 className="uppercase size-6 w-full font-bold mb-4">Form Builder</h1>
+    <div className="grid gap-6">
+      <h1 className="uppercase font-bold">Form Builder</h1>
+      <p>Build form by adding fields</p>
       <form id="form-builder" onSubmit={handleAddFormField}>
         <fieldset className="grid gap-3 border border-yellow-800 p-6 rounded-2xl mb-4">
           <legend>Add a field</legend>
@@ -91,31 +92,34 @@ export default function FormBuilder() {
         <fieldset className="grid gap-3 border border-yellow-800 p-6 rounded-2xl bg-coal">
           <legend>Form Fields</legend>
           <ul>
-            {formFields.map((field) => (
-              <li key={field.id} className="grid gap-3">
-                <label htmlFor={`input-${field.id}`}>{field.label}</label>
-                <input
-                  id={`input-${field.id}`}
-                  required={field.required}
-                  placeholder={field.placeholder}
-                  type={field.type}
-                  value={field.value}
-                  onChange={(e) =>
-                    handleUpdateFormField(field.id, { value: e.target.value })
-                  }
-                  className="primary"
-                />
-                <button
-                  type="button"
-                  className="secondary"
-                  onClick={() => handleDeleteFormField(field.id)}
-                >
-                  Delete
-                </button>
-              </li>
-            ))}
+            {formFields.length !== 0 ? (
+              formFields.map((field) => (
+                <li key={field.id} className="grid gap-3">
+                  <label htmlFor={`input-${field.id}`}>{field.label}</label>
+                  <input
+                    id={`input-${field.id}`}
+                    required={field.required}
+                    placeholder={field.placeholder}
+                    type={field.type}
+                    value={field.value}
+                    onChange={(e) =>
+                      handleUpdateFormField(field.id, { value: e.target.value })
+                    }
+                    className="primary"
+                  />
+                  <button
+                    type="button"
+                    className="secondary"
+                    onClick={() => handleDeleteFormField(field.id)}
+                  >
+                    Delete
+                  </button>
+                </li>
+              ))
+            ) : (
+              <span>Your form fields will show here</span>
+            )}
           </ul>
-          <span>Your form fields will show here</span>
         </fieldset>
       </form>
     </div>

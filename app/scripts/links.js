@@ -4,6 +4,7 @@ import {
   CursorArrowRaysIcon,
   ChatBubbleBottomCenterIcon,
   NewspaperIcon,
+  MagnifyingGlassCircleIcon,
 } from "@heroicons/react/24/outline";
 
 const links = [
@@ -27,6 +28,11 @@ const links = [
     name: "Form Builder",
     href: "/form-builder",
     icon: NewspaperIcon,
+  },
+  {
+    name: "Search Filter",
+    href: "/search-filter",
+    icon: MagnifyingGlassCircleIcon,
   },
 ];
 
