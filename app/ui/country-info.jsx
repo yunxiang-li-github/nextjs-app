@@ -73,13 +73,13 @@ export default function CountryInfo() {
         <article className="my-6">
           <h2 className="font-bold mb-3">{data.name}</h2>
           <table className="w-full">
-            <thead className="text-left border-y border-beige">
+            <thead className="text-left border-y border-beige/40">
               <tr>
-                <th className="w-1/5">Properties</th>
-                <th className="w-4/5">Data</th>
+                <th className="sm:w-1/5 w-1/2">Properties</th>
+                <th className="sm:w-4/5 w-1/2">Data</th>
               </tr>
             </thead>
-            <tbody className="border-y border-beige">
+            <tbody className="border-y border-beige/40">
               <tr>
                 <td>Capital:</td>
                 <td>{data.capital}</td>

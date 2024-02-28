@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "@/app/globals.css";
 import SideNav from "@/app/ui/dashboard/sidenav";
+import MobileNav from "./ui/dashboard/mobile-nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,19 +15,11 @@ export default function RootLayout({ children }) {
     <html lang="en" className="h-full bg-gray-100">
       <body className={`${inter.className} h-full`}>
         <div className="h-full">
+          <MobileNav />
           <div className="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
-            <SideNav/>
+            <SideNav />
           </div>
           <div className="flex flex-1 flex-col md:pl-64 h-full">
-            {/* todo: responsive design */}
-            {/* <div className="sticky top-0 z-10 bg-gray-100 pl-1 pt-1 sm:pl-3 sm:pt-3 md:hidden">
-              <button
-                type="button"
-                className="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-              >
-                <span className="sr-only">Open sidebar</span>
-              </button>
-            </div> */}
             <main className="flex-1">
               <div className="h-full text-beige">{children}</div>
             </main>

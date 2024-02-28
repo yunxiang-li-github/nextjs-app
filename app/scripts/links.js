@@ -5,6 +5,7 @@ import {
   ChatBubbleBottomCenterIcon,
   NewspaperIcon,
   MagnifyingGlassCircleIcon,
+  InformationCircleIcon,
 } from "@heroicons/react/24/outline";
 
 const links = [
@@ -33,6 +34,11 @@ const links = [
     name: "Search Filter",
     href: "/search-filter",
     icon: MagnifyingGlassCircleIcon,
+  },
+  {
+    name: "Country Info",
+    href: "/country-info",
+    icon: InformationCircleIcon,
   },
 ];
 

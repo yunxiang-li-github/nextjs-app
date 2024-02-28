@@ -6,7 +6,7 @@ export default function Badge({ user, mode, children }) {
     <div className="h-full flex flex-col justify-top">
       <div
         className={clsx(
-          "w-80 my-0 mx-auto border border-solid border-beige/10 rounded-lg p-6 flex flex-col gap-4 text-center items-center",
+          "sm:w-80 w-4/5 my-0 mx-auto border border-solid border-beige/10 rounded-lg p-6 flex flex-col gap-4 text-center items-center",
           { "bg-charcoal": mode === "dark", "bg-yellow-50": mode === "light" }
         )}
       >
@@ -40,7 +40,7 @@ export default function Badge({ user, mode, children }) {
             className={clsx(
               {
                 "bg-yellow-500": mode === "dark",
-                "bg-yellow-200": mode === "light",
+                "bg-yellow-200 text-black": mode === "light",
               },
               "appearance-none px-4 py-2 rounded-lg text-xs w-full border-none font-semibold uppercase cursor-pointer mt-2 mb-2 transition-all duration-200 ease-in-out hover:opacity-80"
             )}

@@ -26,14 +26,14 @@ export default function Page() {
     <>
       <div className="p-6 h-full">
         <div
-          className={`h-full rounded-md p-10 ${
+          className={`h-full rounded-md sm:p-10 p-2 ${
             mode === "dark" ? "bg-coal" : ""
           }`}
         >
           <div className="w-full flex flex-row justify-end">
             <Icon
               className={`w-6 hover:cursor-pointer ${
-                mode === "dark" ? "text-white" : ""
+                mode === "dark" ? "text-white" : "text-black"
               }`}
               onClick={handleMode}
             />
